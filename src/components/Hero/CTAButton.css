@@ -1,0 +1,63 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signup-button {
+  background: transparent;
+  border: 2px solid #a855f7;
+  color: #a855f7;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.button-text {
+  background: transparent;
+  color: #a855f7;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.button-arrow {
+  background: #ffffff;
+  color: #000000;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover .button-text {
+  background: #a855f7;
+  color: #ffffff;
+}
+
+.signup-button:hover .button-arrow {
+  background: #ffffff;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .signup-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+.arrow {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
