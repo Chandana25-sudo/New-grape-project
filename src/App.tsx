@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import { Home } from "./pages/Home";
 import { Features } from "./pages/Features";
 import { Security } from "./pages/Security";
@@ -19,6 +20,7 @@ import "./styles/global.css";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         <Header />
         <main className="main-content">

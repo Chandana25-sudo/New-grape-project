@@ -20,6 +20,7 @@
   align-items: center;
   border-radius: 0;
   overflow: hidden;
+  width: auto;
 }
 
 .button-text {
@@ -27,6 +28,7 @@
   color: #a855f7;
   padding: 0.75rem 2rem;
   transition: all 0.3s ease;
+  flex: 1;
 }
 
 .button-arrow {
@@ -37,6 +39,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .signup-button:hover .button-text {
@@ -49,10 +52,80 @@
   transform: translateX(4px);
 }
 
-@media (max-width: 768px) {
+/* Tablet view */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .button-container {
+    width: 100%;
+    justify-content: center;
+  }
+
   .signup-button {
-    padding: 0.7rem 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.9rem;
+    border: 2px solid #a855f7;
+  }
+
+  .button-text {
+    padding: 0.75rem 1.8rem;
+    flex: 1;
+  }
+
+  .button-arrow {
+    padding: 0.75rem 1rem;
+    /* background: #a855f7;
+    color: #ffffff; */
+    border-left: 2px solid #a855f7;
+    flex-shrink: 0;
+    min-width: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .signup-button {
+    width: 100%;
+    max-width: 280px;
     font-size: 0.85rem;
+    border: 2px solid #a855f7;
+  }
+
+  .button-text {
+    padding: 0.7rem 1.5rem;
+    flex: 1;
+  }
+
+  .button-arrow {
+    padding: 0.7rem 1rem;
+    /* background: #a855f7;
+    color: #ffffff; */
+    border-left: 2px solid #a855f7;
+    flex-shrink: 0;
+    min-width: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-button {
+    max-width: 250px;
+    font-size: 0.8rem;
+  }
+
+  .button-text {
+    padding: 0.6rem 1.2rem;
+    flex: 1;
+  }
+
+  .button-arrow {
+    padding: 0.6rem 0.8rem;
+    /* background: #a855f7;
+    color: #ffffff; */
+    flex-shrink: 0;
+    min-width: 2.8rem;
   }
 }
 

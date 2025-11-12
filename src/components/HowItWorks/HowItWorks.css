@@ -111,7 +111,7 @@
 
 @media (max-width: 768px) {
   .how-it-works {
-    padding: 60px 0;
+    padding: 60px 1.5rem;
   }
 
   .how-it-works__header {
@@ -125,9 +125,11 @@
   .steps {
     grid-template-columns: 1fr;
     gap: 30px;
+    margin: 0 1rem;
   }
 
   .step {
     padding: 30px 20px;
+    margin: 0 0.5rem;
   }
 }

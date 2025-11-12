@@ -6,6 +6,7 @@
   padding: 0.5rem;
   flex-direction: column;
   gap: 4px;
+  z-index: 1001;
 }
 
 @media (max-width: 768px) {
@@ -19,4 +20,18 @@
   height: 2px;
   background: #ffffff;
   transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger to X animation */
+.menu-button--open .menu-line:nth-child(1) {
+  transform: rotate(45deg) translate(2px, 3px);
+}
+
+.menu-button--open .menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button--open .menu-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }

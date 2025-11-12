@@ -116,3 +116,28 @@
 .footer-social a:hover {
   color: #a855f7;
 }
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-links a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  display: block;
+}

@@ -5,6 +5,16 @@
   overflow: hidden;
 }
 
+/* Modal variant - removes padding and background */
+.inline-form--modal {
+  padding: 0;
+  background: none;
+}
+
+.inline-form--modal::before {
+  display: none;
+}
+
 .inline-form::before {
   content: "";
   position: absolute;

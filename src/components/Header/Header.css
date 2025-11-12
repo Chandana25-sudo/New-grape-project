@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 10rem;
   background: transparent;
+  background-color: #0d0628;
   position: relative;
   z-index: 1000;
 }

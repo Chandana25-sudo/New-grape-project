@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { InlineForm } from "../components/Forms/InlineForm";
 import "./Features.css";
 
 export const Features: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   const features = [
     {
       category: "Security",
@@ -119,8 +124,22 @@ export const Features: React.FC = () => {
           <p>
             Join thousands of users who are already banking smarter with Grape
           </p>
-          <button className="cta-button">Join Waitlist</button>
+          <button className="cta-button" onClick={openModal}>
+            Join Waitlist
+          </button>
         </div>
+
+        {/* Modal for InlineForm */}
+        {isModalOpen && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={closeModal}>
+                ×
+              </button>
+              <InlineForm isModal={true} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

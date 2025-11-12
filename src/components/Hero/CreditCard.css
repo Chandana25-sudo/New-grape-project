@@ -12,30 +12,48 @@
   perspective: 1000px;
   position: relative;
   width: 500px;
-  height: 400px;
+  height: 496px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Tablet responsive styles with calc() */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .card-container {
+    width: calc(100vw - 4rem);
+    max-width: 450px;
+    height: calc((100vw - 4rem) * 0.9);
+    max-height: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+
+/* Mobile responsive styles with proper scaling */
+@media (max-width: 768px) {
+  .card-container {
+    width: calc(100vw - 2rem);
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    width: calc(100vw - 1rem);
+    max-width: 95vw;
+    height: auto;
+    padding: 0.5rem;
+  }
 }
 
 .hero__video {
   position: absolute;
   width: 100%;
   height: 31em;
-  background-image: radial-gradient(
-      circle,
-      rgba(13, 6, 40, 0) 72%,
-      rgb(13, 6, 40)
-    ),
-    linear-gradient(270deg, rgb(13, 6, 40), rgba(13, 6, 40, 0) 4%),
-    linear-gradient(90deg, rgb(13, 6, 40), rgba(13, 6, 40, 0) 4%),
-    linear-gradient(
-      0deg,
-      rgb(13, 6, 40),
-      rgba(13, 6, 40, 0) 4%,
-      rgba(13, 6, 40, 0)
-    ),
-    linear-gradient(rgb(13, 6, 40), rgba(13, 6, 40, 0) 4%, rgba(13, 6, 40, 0));
   z-index: 1;
   overflow: hidden;
   border-radius: 2em;
@@ -52,28 +70,23 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: -1;
+  opacity: 1;
 }
 
-.grape-model-wrapper {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.grape-model-wrapper canvas {
-  width: 100% !important;
-  height: 100% !important;
-}
-
+/* Hide video on tablet/mobile view */
 @media (max-width: 768px) {
-  .grape-model-wrapper {
-    width: 300px;
-    height: 300px;
+  .hero__video {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__video {
+    width: 100%;
+    height: 25vw;
+    min-height: 180px;
+    max-height: 220px;
+    border-radius: 1.2em;
   }
 }
 
@@ -90,17 +103,17 @@
   perspective: 2000em;
 }
 
-.hero__card-contain {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 2000em;
+@media (max-width: 768px) {
+  .hero__card-contain {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+  }
 }
 
 .hero__card {
@@ -209,23 +222,83 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* Tablet view with calc() */
+@media (max-width: 1024px) and (min-width: 769px) {
   .hero__card {
-    width: 28em;
-    height: 18em;
-    min-width: 28em;
+    width: calc(80vw - 2rem);
+    max-width: 400px;
+    height: calc((80vw - 2rem) * 0.6);
+    max-height: 240px;
+    min-width: 320px;
+    min-height: 200px;
   }
 
   .hero__card-content {
-    padding: 2em;
+    padding: 1.8em;
   }
 
   .hero__card-text {
-    font-size: 1.1em;
+    font-size: 1.2rem;
   }
 
   .hero__card-logo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__card {
+    width: calc(80vw - 1rem);
+    max-width: 350px;
+    height: calc((80vw - 1rem) * 0.6);
+    max-height: 220px;
+    min-width: 280px;
+    min-height: 180px;
+  }
+
+  .hero__card-content {
+    padding: 1.5em;
+  }
+
+  .hero__card-text {
+    font-size: 1rem;
+  }
+
+  .hero__card-logo {
+    font-size: 1.2rem;
+  }
+
+  .hero__card-bar {
+    bottom: 1.3em;
+    right: 1.5em;
+    width: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__card {
+    width: 85vw;
+    max-width: 300px;
+    height: 55vw;
+    max-height: 190px;
+    min-width: 260px;
+    min-height: 160px;
+  }
+
+  .hero__card-content {
+    padding: 1.2em;
+  }
+
+  .hero__card-text {
+    font-size: 0.9rem;
+  }
+
+  .hero__card-logo {
+    font-size: 1.1rem;
+  }
+
+  .hero__card-bar {
+    width: 2em;
   }
 }
 

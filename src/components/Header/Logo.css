@@ -11,3 +11,15 @@
 .logo-container:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 1.8rem;
+  }
+}

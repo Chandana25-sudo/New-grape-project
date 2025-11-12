@@ -11,7 +11,6 @@ module.exports = {
         exclude: [
           // Exclude problematic packages from source map processing
           /node_modules\/@mediapipe/,
-          /node_modules\/three/,
         ],
       });
 
@@ -19,9 +18,6 @@ module.exports = {
       webpackConfig.ignoreWarnings = [
         {
           module: /node_modules\/@mediapipe/,
-        },
-        {
-          module: /node_modules\/three/,
         },
         function (warning) {
           return (

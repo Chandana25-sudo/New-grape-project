@@ -7,7 +7,11 @@ interface FormData {
   phone: string;
 }
 
-export const InlineForm: React.FC = () => {
+interface InlineFormProps {
+  isModal?: boolean;
+}
+
+export const InlineForm: React.FC<InlineFormProps> = ({ isModal = false }) => {
   const [formData, setFormData] = useState<FormData>({
     email: "",
     fullName: "",
@@ -45,7 +49,7 @@ export const InlineForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section className="inline-form">
+      <section className={`inline-form ${isModal ? 'inline-form--modal' : ''}`}>
         <div className="container">
           <div className="form-success">
             <div className="success-icon">✅</div>
@@ -60,7 +64,7 @@ export const InlineForm: React.FC = () => {
   }
 
   return (
-    <section className="inline-form">
+    <section className={`inline-form ${isModal ? 'inline-form--modal' : ''}`}>
       <div className="container">
         <div className="form-wrapper">
           <div className="form-header">

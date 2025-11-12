@@ -2,6 +2,7 @@ import React from "react";
 import { CreditCard } from "./CreditCard";
 import { CTAButton } from "./CTAButton";
 import "./HeroSection.css";
+import starIcon from "../../assets/star 1.png";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -9,11 +10,7 @@ export const HeroSection: React.FC = () => {
       <div className="content-section">
         <div className="title-container">
           <h1 className="main-heading">
-            <img
-              src="https://cdn.prod.website-files.com/5ffcd643561bc26ed27a87a1/5ffcd643561bc21ff17a87ad_icon.svg"
-              alt="Grape Icon"
-              className="grape-icon"
-            />
+            <img src={starIcon} alt="Star Icon" className="grape-icon" />
             A FRESH
             <br />
             TAKE ON

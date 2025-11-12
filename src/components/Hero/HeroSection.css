@@ -4,16 +4,40 @@
   justify-content: space-between;
   padding: 4rem 3rem 2rem;
   min-height: 70vh;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 7rem;
+  background: radial-gradient(
+      ellipse at center bottom,
+      rgba(59, 130, 246, 0.06) 0%,
+      rgba(29, 78, 216, 0.04) 30%,
+      transparent 70%
+    ),
+    linear-gradient(
+      90deg,
+      #0d0628 0%,
+      rgba(29, 78, 216, 0.03) 20%,
+      rgba(59, 130, 246, 0.02) 50%,
+      rgba(29, 78, 216, 0.03) 80%,
+      #0d0628 100%
+    ),
+    linear-gradient(
+      180deg,
+      #0d0628 0%,
+      rgba(13, 6, 40, 0.98) 30%,
+      rgba(29, 78, 216, 0.02) 70%,
+      rgba(59, 130, 246, 0.04) 90%,
+      rgba(29, 78, 216, 0.05) 100%
+    ),
+    #0d0628;
 }
 
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1.5rem;
-    gap: 3rem;
+    padding: 2rem 1rem;
+    margin: 0;
+    gap: 2rem;
+    min-height: auto;
   }
 }
 
@@ -39,8 +63,10 @@
 
 @media (max-width: 768px) {
   .grape-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0;
+    margin-top: 0;
   }
 }
 
@@ -99,15 +125,20 @@
   }
 }
 
-.card-section {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Tablet view */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .card-section {
+    height: 19rem;
+  }
 }
 
 @media (max-width: 768px) {
   .card-section {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 19rem;
+    align-items: center;
+    overflow: hidden;
   }
 }

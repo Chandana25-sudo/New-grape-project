@@ -4,6 +4,7 @@ import { ValueProps } from "../components/ValueProps/ValueProps";
 import { HowItWorks } from "../components/HowItWorks/HowItWorks";
 import { SocialProof } from "../components/SocialProof/SocialProof";
 import { InlineForm } from "../components/Forms/InlineForm";
+import "./Home.css";
 
 export const Home: React.FC = () => {
   return (
